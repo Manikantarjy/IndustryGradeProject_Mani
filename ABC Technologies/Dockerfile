@@ -2,9 +2,8 @@
  RUN apt-get -y update && apt-get -y upgrade
  RUN apt-get -y install openjdk-17.0.12-jdk wget
  RUN mkdir /usr/local/tomcat
- ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz
- /tmp/apache-tomcat-9.0.96.tar.gz
- RUN cd /tmp &&  tar xvfz apache-tomcat-9.0.96.tar.gz
+ ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz /tmp/apache-tomcat-9.0.96.tar.gz
+ RUN cd /tmp && tar xvfz apache-tomcat-9.0.96.tar.gz
  RUN cp -Rv /tmp/apache-tomcat-9.0.96/* /usr/local/tomcat/
  ADD **/*.war /usr/local/tomcat/webapps
  EXPOSE 8090
