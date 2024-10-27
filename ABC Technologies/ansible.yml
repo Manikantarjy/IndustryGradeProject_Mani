@@ -1,10 +1,10 @@
-- hosts: ec2_hosts
+- hosts: localhost
   become: yes
   tasks:
         - name: Build an image and push it to a private repo
           community.docker.docker_image:
               build:
-                  path: "/opt/jenkins-slave/workspace/Docker_Package/ABC Technologies"
+                  path: "/var/lib/jenkins/workspace/Docker_Package/ABC Technologies"
               name: docker.io/manikantarjy/abctechnologies
               #tag: test
               push: true
