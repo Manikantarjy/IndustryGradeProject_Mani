@@ -7,4 +7,4 @@
  RUN cp -Rv /tmp/apache-tomcat-9.0.96/* /usr/local/tomcat/
  ADD **/*.war /usr/local/tomcat/webapps
  EXPOSE 8090
- CMD /usr/local/tomcat/bin/catalina.sh run
+ CMD /usr/local/tomcat/bin/catalina.sh run 
