@@ -2,8 +2,6 @@
 - hosts: localhost
   connection: local
   become: yes
-  vars:
-    ansible_python_interpreter: /usr/bin/python3.8
   tasks:
     - name: Build an image and push it to a private repo
       community.docker.docker_image:
