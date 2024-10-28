@@ -6,7 +6,7 @@
       community.docker.docker_image:
         build:
           path: "/var/lib/jenkins/workspace/Docker_Package/ABC Technologies"
-        name: docker.io/manikantarjy/testrepo
+        name: docker.io/manikantarjy/abctechnologies
         push: true
         source: build
       register: docker_build_output
@@ -18,7 +18,7 @@
     - name: Start the container
       community.docker.docker_container:
         name: abc-application
-        image: manikantarjy/testrepo
+        image: manikantarjy/abctechnologies
         state: started
         ports:
           - "1234:8080"
