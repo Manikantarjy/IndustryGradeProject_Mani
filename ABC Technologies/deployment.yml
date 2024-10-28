@@ -19,7 +19,7 @@ spec:
                 app: abc-tech-app
         spec:
             containers:
-                - image: manikantarjy/abctechnologies
+                - image: manikantarjy/testrepo
                   name: app
 ---
 
