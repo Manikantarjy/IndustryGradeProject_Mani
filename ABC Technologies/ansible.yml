@@ -5,7 +5,7 @@
     - name: Build an image and push it to a private repo
       community.docker.docker_image:
         build:
-          path: "/var/lib/jenkins/workspace/Docker_Package/ABC Technologies"
+          path: "/home/edureka/Desktop"
         name: docker.io/manikantarjy/abctechnologies
         push: true
         source: build
